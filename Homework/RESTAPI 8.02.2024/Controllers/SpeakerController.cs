@@ -16,9 +16,9 @@ public class SpeakerController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Speaker>> GetTests(string? name = null)
+    public ActionResult<IEnumerable<Speaker>> GetSpeakers(string? name = null)
     {
-        var query = _context.Speaker!.AsQueryable();
+        var query = _context.Speakers!.AsQueryable();
 
         if (name != null)
             query = query.Where(x => x.name != null && x.name.ToUpper().Contains(name.ToUpper()));
@@ -28,9 +28,9 @@ public class SpeakerController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public ActionResult<TextReader> Speaker(int id)
+    public ActionResult<TextReader> GetSpeaker(int id)
     {
-        var test = _context.Speaker!.Find(id);
+        var test = _context.Speakers!.Find(id);
 
         if (test == null)
         {
@@ -41,30 +41,30 @@ public class SpeakerController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public IActionResult PutTest(int id, Test test)
+    public IActionResult PutSpeaker(int id, Speaker speaker)
     {
-        var dbTest = _context.Tests!.AsNoTracking().FirstOrDefault(x => x.Id == test.Id);
-        if (id != test.Id || dbTest == null)
+        var dbTest = _context.Speakers!.AsNoTracking().FirstOrDefault(x => x.id == speaker.id);
+        if (id != speaker.id || dbTest == null)
         {
             return NotFound();
         }
 
-        _context.Update(test);
+        _context.Update(speaker);
         _context.SaveChanges();
 
         return NoContent();
     }
 
     [HttpPost]
-    public ActionResult<Test> PostTest(Test test)
+    public ActionResult<Speaker> PostSpeaker(Speaker speaker)
     {
-        var dbExercise = _context.Tests!.Find(test.Id);
+        var dbExercise = _context.Speakers!.Find(speaker.id);
         if (dbExercise == null)
         {
-            _context.Add(test);
+            _context.Add(speaker);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(GetTest), new { Id = test.Id }, test);
+            return CreatedAtAction(nameof(GetSpeaker), new { Id = speaker.id }, speaker);
         }
         else
         {
@@ -73,15 +73,15 @@ public class SpeakerController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public IActionResult DeleteTest(int id)
+    public IActionResult DeleteSpeaker(int id)
     {
-        var test = _context.Tests!.Find(id);
-        if (test == null)
+        var speaker = _context.Speakers!.Find(id);
+        if (speaker == null)
         {
             return NotFound();
         }
 
-        _context.Remove(test);
+        _context.Remove(speaker);
         _context.SaveChanges();
 
         return NoContent();
