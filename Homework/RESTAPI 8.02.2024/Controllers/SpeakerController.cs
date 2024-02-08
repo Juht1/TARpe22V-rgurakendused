@@ -16,20 +16,21 @@ public class SpeakerController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Test>> GetTests(string? name = null)
+    public ActionResult<IEnumerable<Speaker>> GetTests(string? name = null)
     {
-        var query = _context.Tests!.AsQueryable();
+        var query = _context.Speaker!.AsQueryable();
 
         if (name != null)
-            query = query.Where(x => x.Name != null && x.Name.ToUpper().Contains(name.ToUpper()));
+            query = query.Where(x => x.name != null && x.name.ToUpper().Contains(name.ToUpper()));
+            query = query.Where(x => x.Email != null);
 
         return query.ToList();
     }
 
     [HttpGet("{id}")]
-    public ActionResult<TextReader> GetTest(int id)
+    public ActionResult<TextReader> Speaker(int id)
     {
-        var test = _context.Tests!.Find(id);
+        var test = _context.Speaker!.Find(id);
 
         if (test == null)
         {
