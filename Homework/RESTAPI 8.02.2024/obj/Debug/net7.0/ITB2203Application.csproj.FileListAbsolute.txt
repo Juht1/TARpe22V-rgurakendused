@@ -34,3 +34,5 @@
 /Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/obj/Debug/net7.0/ITB2203Application.pdb
 /Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/obj/Debug/net7.0/ITB2203Application.genruntimeconfig.cache
 /Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/obj/Debug/net7.0/ref/ITB2203Application.dll
+/Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/bin/Debug/net7.0/newman/test.postman_collection.json
+/Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/bin/Debug/net7.0/newman/test.postman_environment.json
