@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj": {}
+    "/Users/kristjanjuht/Downloads/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj": {}
   },
   "projects": {
-    "/Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj": {
+    "/Users/kristjanjuht/Downloads/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj",
+        "projectUniqueName": "/Users/kristjanjuht/Downloads/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj",
         "projectName": "ITB2203Application",
-        "projectPath": "/Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj",
+        "projectPath": "/Users/kristjanjuht/Downloads/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj",
         "packagesPath": "/Users/kristjanjuht/.nuget/packages/",
-        "outputPath": "/Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/obj/",
+        "outputPath": "/Users/kristjanjuht/Downloads/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kristjanjuht/.nuget/NuGet/NuGet.Config"
@@ -20,6 +20,7 @@
           "net7.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },

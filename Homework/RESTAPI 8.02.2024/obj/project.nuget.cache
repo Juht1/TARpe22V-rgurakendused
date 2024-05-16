@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QEgk0aEfWSo/h4iYyqhE715q6MclPn0j96YB7AMbBGbWiJCXF3AMiH6zRnLiUXNK4JjE+JjtQVBRbMoKxWzPhg==",
+  "dgSpecHash": "aeLFZaOnuG3j9qeiC6Z46lWdDnGJQIORKs1k/r8TlZPlwOzbweahhKHz+SOT7EESc2UDrghhxRS6BEl77PIHbQ==",
   "success": true,
-  "projectFilePath": "/Users/kristjanjuht/Documents/GitHub/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj",
+  "projectFilePath": "/Users/kristjanjuht/Downloads/TARpe22V-rgurakendused/Homework/RESTAPI 8.02.2024/ITB2203Application.csproj",
   "expectedPackageFiles": [
     "/Users/kristjanjuht/.nuget/packages/microsoft.aspnetcore.openapi/7.0.11/microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
     "/Users/kristjanjuht/.nuget/packages/microsoft.entityframeworkcore/7.0.13/microsoft.entityframeworkcore.7.0.13.nupkg.sha512",

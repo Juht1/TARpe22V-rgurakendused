@@ -16,7 +16,7 @@ public class EventsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Event>> GetEvents(string? name = null, DateTime? date = null, String? Location = null)
+    public ActionResult<IEnumerable<Event>> GetEvents(string? Email = null, string? name = null, string? Location = null)
     {
         var query = _context.Events!.AsQueryable();
 
@@ -29,10 +29,10 @@ public class EventsController : ControllerBase
         return query.ToList();
     }
 
-    [HttpGet("{iD}")]
-    public ActionResult<TextReader> GetEvent(int iD)
+    [HttpGet("{id}")]
+    public ActionResult<TextReader> GetEvent(int id)
     {
-        var Event = _context.Events!.Find(iD);
+        var Event = _context.Events!.Find(id);
 
         if (Event == null)
         {
@@ -42,11 +42,11 @@ public class EventsController : ControllerBase
         return Ok(Event);
     }
 
-    [HttpPut("{iD}")]
-    public IActionResult PutEvent(int iD , Event events)
+    [HttpPut("{id}")]
+    public IActionResult PutEvent(int id , Event events)
     { 
-        var dbEvent = _context.Events!.AsNoTracking().FirstOrDefault(x => x.iD == events.iD);
-        if (iD != events.iD || dbEvent == null)
+        var dbEvent = _context.Events!.AsNoTracking().FirstOrDefault(x => x.id == events.id);
+        if (id != events.id || dbEvent == null)
 
         {
             return NotFound();
@@ -59,15 +59,15 @@ public class EventsController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult<Event> PostTest(Event events)
+    public ActionResult<Event> PostEvent(Event e)
     {
-        var dbExercise = _context.Events!.Find(events.iD);
+        var dbExercise = _context.Events!.Find(e.id);
         if (dbExercise == null)
         {
-            _context.Add(events);
+            _context.Add(e);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(GetEvent), new { Id = events.iD }, events);
+            return CreatedAtAction(nameof(GetEvent), new { Id = e.id }, e);
         }
         else
         {
@@ -75,10 +75,11 @@ public class EventsController : ControllerBase
         }
     }
 
-    [HttpDelete("{iD}")]
-    public IActionResult DeleteTest(int iD)
+
+    [HttpDelete("{id}")]
+    public IActionResult DeleteEvent (int id)
     {
-        var Event = _context.Events!.Find(iD);
+        var Event = _context.Events!.Find(id);
         if (Event == null)
         {
             return NotFound();
